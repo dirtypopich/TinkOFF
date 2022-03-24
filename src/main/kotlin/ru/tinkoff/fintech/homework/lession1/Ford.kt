@@ -7,13 +7,14 @@ class Ford(override val model: String, override val fuel: String, override val h
         println("Текущая цена автомобиля Ford $model: $price$")
     }
 
-    override fun startEngine() {
+    override fun startEngine(){
         println("Нажать на кнопку")
         println("Wr-wr-wr-wr")
         println("Engine is started")
     }
 
-    fun fuelConsumption(){
+    fun fuelConsumption():Double{
         println ("Расход топлива составляет:" + (horsePowers / 10.0 - 5))
+        return(horsePowers / 10.0 - 5)
     }
 }

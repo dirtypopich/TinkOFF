@@ -4,13 +4,13 @@ class Lada(override val model: String, override val fuel: String, override val h
            override var price: Short = 0, private val age: Short): Car() {
     private var damaged: Boolean = false
 
-    fun isDamaged(){
+    fun isDamaged(): String{
         if (age > 5) {
             damaged = true
-            println("Машина имеет ржавчину")
+            return ("Машина имеет ржавчину")
         }
         else{
-            println("Машина не гнилая")
+            return ("Машина не гнилая")
         }
     }
 
@@ -18,7 +18,7 @@ class Lada(override val model: String, override val fuel: String, override val h
         if (age < 3 ){
             price = 1300
         }
-        else if (age >= 3 && age <= 5){
+        else if (age in 3..5){
             price = 1000
         }
         else {
